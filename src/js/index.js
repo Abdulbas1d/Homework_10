@@ -1,5 +1,6 @@
 const themeToggle = document.getElementById("theme-toggle");
 const html = document.documentElement;
+const template = getElementById("template")
 
 if (localStorage.getItem("theme")) {
     html.setAttribute("data-theme", localStorage.getItem("theme"));
@@ -13,3 +14,9 @@ themeToggle.addEventListener("input", () => {
     );
     localStorage.setItem("theme", html.dataset.theme)
 });
+
+fetch("https://restcountries.com/v3.1/all").then((data) => {
+    return data.json()
+}) .then((countries) => {
+    console.log(countries);
+})

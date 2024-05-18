@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme = "dracula">
+<html class="h-full" lang="en" data-theme = "dracula">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./src/output.css">
 </head>
-<body>
+<body class="flex flex-col h-full">
     <!-- Part Navbar -->
     <header class="bg-base-300 mb-5">
         <div class="navbar max-w-6xl mx-auto">
@@ -55,7 +55,24 @@
     </header>
 
     <!-- Part Main -->
-    <main></main>
+    <main class="grow">
+        <section class="max-w-6xl mx-auto">
+            <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"> 
+                <template id="template">
+                    <li class="card bg-base-100 shadow-xl">
+                        <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                        <div class="card-body">
+                          <h2 class="card-title">Shoes!</h2>
+                          <p>If a dog chews shoes whose shoes does he choose?</p>
+                          <div class="card-actions justify-end">
+                            <button class="btn btn-primary hover:bg-rose-400 hover:italic active:outline-2">Buy Now</button>
+                            </div>
+                        </div>
+                    </li>
+                </template>
+            </ul>
+        </section>
+    </main>
 
     <!-- Part Footer -->
     <footer>
